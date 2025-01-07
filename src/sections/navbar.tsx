@@ -76,7 +76,7 @@ export const Navbar = () => {
           Vansh Ahuja
         </h2>
         <p className="text-gray-400 mt-6 text-xl sm:text-2xl md:text-3xl">
-          I am a passionate software engineer with a love for creating intuitive and powerful web applications. I&apos;m a self-taught developer with a deep interest in Computer Science, constantly exploring new technologies to push the boundaries of frontend development. Currently, I specialize in React and Next.js, and I enjoy solving complex challenges with clean, maintainable code.
+          I am a passionate software developer with a love for creating intuitive and powerful web applications. I&apos;m a self-taught developer with a deep interest in Computer Science, constantly exploring new technologies to push the boundaries of frontend development. Currently, I specialize in React and Node, and I enjoy solving complex challenges with clean, maintainable code.
         </p>
         <div className="mt-8">
           <span className="text-pink-400 text-lg sm:text-xl md:text-2xl block">
