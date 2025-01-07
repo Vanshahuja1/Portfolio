@@ -80,10 +80,10 @@ export const Navbar = () => {
         </p>
         <div className="mt-8">
           <span className="text-pink-400 text-lg sm:text-xl md:text-2xl block">
-            🚀 Currently specializing in Frontend (React / Next.js)
+            🚀 Exploring Next.js , Framer
           </span>
           <span className="text-yellow-400 text-lg sm:text-xl md:text-2xl block mt-4">
-            ⚡ Frontend Engineer at GGL
+            ⚡ Proficient in MERN STACK 
           </span>
         </div>
         <div className="flex space-x-6 mt-8">
