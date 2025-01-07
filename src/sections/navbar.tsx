@@ -6,7 +6,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white min-h-screen flex flex-col">
+    <header className="bg-black text-white h-screen flex flex-col">
       {/* Navbar */}
       <nav className="w-full bg-black py-4 px-6 flex justify-between items-center border-b border-gray-700">
         {/* Logo */}

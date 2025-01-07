@@ -41,7 +41,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <div className="bg-black text-white px-16 py-16">
+    <div className="bg-black h-screen text-white px-16 py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8">All Creative Works.</h2>
         <p className="text-lg mb-16">

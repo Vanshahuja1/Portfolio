@@ -35,7 +35,7 @@ export const AchievementsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-black text-white" id="achievements">
+    <section className="py-16 bg-black text-white h-screen"  id="achievements">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center">Achievements</h2>
         <motion.ul

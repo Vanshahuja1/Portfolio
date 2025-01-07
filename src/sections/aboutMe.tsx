@@ -4,7 +4,7 @@ import React from 'react';
 
 export const AboutMe = () => {
   return (
-    <div className="flex items-center justify-center h-[70vh] bg-black">
+    <div className="flex items-center justify-center h-screen bg-black">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
