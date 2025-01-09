@@ -16,6 +16,10 @@ export const AchievementsSection = () => {
       title: '2nd Position, CodeRush Competition',
       description: 'Demonstrating data structures, algorithms, and problem-solving expertise.',
     },
+    {
+      title: 'Solved 400+ DSA Problems',
+      description: 'Demonstrating problem-solving abilities in Data Structures and Algorithms.',
+    },
   ];
 
   const extraCurricularActivities = [
@@ -35,7 +39,7 @@ export const AchievementsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-black text-white h-screen"  id="achievements">
+    <section id="Achievements" className="py-16 bg-black text-white h-screen" >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8 text-center">Achievements</h2>
         <motion.ul
@@ -48,7 +52,7 @@ export const AchievementsSection = () => {
           {achievements.map((achievement, index) => (
             <motion.li
               key={index}
-              className="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition"
+              className="flex items-center space-x-4 bg-black p-4 rounded-lg shadow-lg hover:shadow-2xl transition"
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.5, delay: 0.2 * (index + 1) }}
@@ -84,7 +88,7 @@ export const AchievementsSection = () => {
           {extraCurricularActivities.map((activity, index) => (
             <motion.li
               key={index}
-              className="flex items-center space-x-4 bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-2xl transition"
+              className="flex items-center space-x-4 bg-black p-4 rounded-lg shadow-lg hover:shadow-2xl transition"
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.5, delay: 0.2 * (index + 1) }}

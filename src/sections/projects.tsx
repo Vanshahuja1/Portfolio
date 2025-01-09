@@ -10,16 +10,23 @@ const projects = [
       "Developed a secure file storage platform enabling users to upload, share, and manage files (photos, videos, and documents). Implemented OTP-based secure login/signup, improving authentication success rates by 20%. Enhanced file accessibility with responsive dashboards and advanced filtering options, increasing user satisfaction by 25%. Designed a flexible storage plan system with adjustable pricing, achieving a 15% boost in user retention.",
     technologies: ["Next.js", "Appwrite", "Tailwind CSS"],
     video: "/images/video2.mp4",
-    link: "#",
+    link: "https://github.com/Vanshahuja1/Storage",
   },
-  
   {
     title: "Real-Time Collaboration Tool",
     description:
       "Engineered a real-time multi-user platform supporting document co-editing, improving team productivity by 30%. Implemented live editing visualization, enabling real-time changes, reducing workflow delays by 25%. Designed role-based access control (read, write, and admin roles) with Clerk, cutting unauthorized access by 40%.",
     technologies: ["Next.js", "Clerk", "Liveblocks", "Tailwind CSS"],
     image: "/images/image.png",
-    link: "#",
+    link: "https://github.com/Vanshahuja1/Collaboration-Tool",
+  },
+  {
+    title: "MedAI",
+    description:
+      "MedAI is an advanced AI-powered diagnostic system that leverages machine learning algorithms to assist healthcare professionals in diagnosing medical conditions. The system analyzes medical data and provides real-time, accurate diagnostic insights, improving the speed and accuracy of diagnosis.",
+    technologies: ["React", "Python", "Machine Learning"],
+    image: "/images/Health.png",
+    link: "https://github.com/Vanshahuja1/HealthCare.ai",
   },
   {
     title: "SaaS Landing Page",
@@ -27,21 +34,31 @@ const projects = [
       "A landing page built with Next.js and Tailwind CSS featuring pricing sections and other essential components for a professional SaaS platform, providing clear navigation and a clean, modern design to effectively showcase the service’s value proposition.",
     technologies: ["Next.js", "Tailwind CSS"],
     video: "/images/video1.mp4",
-    link: "#",
+    link: "https://saas-landing-page-7vbp5jrrn-vanshahuja1s-projects.vercel.app/",
   },
+  {
+    title: "HisabBook",
+    description:
+      "HisabBook is a simple and intuitive web app designed for generating, previewing, and downloading receipts — ideal for both personal and business use. Built with React and styled with Tailwind CSS, it provides a streamlined user experience for efficient receipt management.",
+    technologies: ["React", "Tailwind CSS"],
+    image: "/images/Hisab.png",
+    link: "https://hisabbook-uixi.onrender.com/",
+  },
+  
+  
   {
     title: "Personalized Learning Platform",
     description:
       "Created an AI-powered learning platform delivering customized learning paths based on user inputs using the Gemini API. Integrated JWT-based authentication to enhance platform security, reducing unauthorized access by 30%. Designed a user-centric, responsive dashboard for seamless navigation and progress tracking, improving user engagement by 40%.",
     technologies: ["MERN Stack", "Gemini API", "JWT Authentication"],
     image: "/images/Home.png",
-    link: "#",
+    link: "https://github.com/Vanshahuja1/Personlized_Learning_WebApp",
   },
 ];
 
 export const Projects = () => {
   return (
-    <div className="bg-black text-white px-14 py-16">
+    <div className="bg-black text-white px-14 py-16" id="Projects">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-8">All Creative Works.</h2>
         <p className="text-lg mb-16">
@@ -69,7 +86,6 @@ export const Projects = () => {
               ) : (
                 <video
                   src={project.video}
-                  
                   width="300"
                   height="300"
                   className="w-full md:w-1/2 h-60 object-cover rounded-lg shadow-lg"

@@ -1,16 +1,33 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Bg from '../assets/BG.jpg';
+import Logo from '../assets/Logo.png';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white h-screen flex flex-col">
+    <header className="bg-black text-white min-h-screen flex flex-col relative">
+      {/* Background Image with Gradual Opacity Fade */}
+      <div className="absolute top-0 left-0 w-full h-full z-0">
+        <div 
+          style={{
+            background: `linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 100%), url(${Bg.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '100%',
+            width: '100%',
+          }}
+          className="absolute top-0 left-0 w-full h-full"
+        />
+      </div>
+
       {/* Navbar */}
-      <nav className="w-full bg-black py-4 px-6 flex justify-between items-center border-b border-gray-700">
+      <nav className="w-full bg-black py-4 px-6 flex justify-between items-center border-b border-gray-700 z-10 relative">
         {/* Logo */}
-        <div className="text-green-400 text-4xl font-bold">V</div>
+        <Image src={Logo} alt="Logo" height={60} width={60} />
 
         {/* Hamburger Menu for Small Devices */}
         <button
@@ -41,9 +58,9 @@ export const Navbar = () => {
         <ul
           className={`${
             isOpen ? "block" : "hidden"
-          } absolute top-16 right-0 w-full bg-black border-t border-gray-700 md:static md:flex md:items-center md:space-x-9 md:border-none md:w-auto`}
+          } absolute top-16 right-0 w-full bg-black border-t border-gray-700 md:static md:flex md:items-center md:space-x-9 md:border-none md:w-auto z-20`}
         >
-          {["About", "Projects", "Skills", "Contact"].map((item, index) => (
+          {["About", "Projects", "Skills", "Achievements", "Contact"].map((item, index) => (
             <motion.li
               key={item}
               className="py-2 md:py-0 md:inline-block"
@@ -52,7 +69,7 @@ export const Navbar = () => {
               transition={{ delay: 0.1 * index }}
             >
               <a
-                href={`#${item.toLowerCase()}`}
+                href={`#${item}`}
                 className="block text-center text-3xl hover:text-green-400 md:text-base"
               >
                 {item}
@@ -67,23 +84,24 @@ export const Navbar = () => {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-left flex-grow flex flex-col justify-center items-start px-10 md:px-20 lg:px-32 bg-black"
+        className="text-left flex-grow flex flex-col justify-center items-start px-10 md:px-20 lg:px-32 z-10 relative"
       >
-        <h1 className="text-green-400 text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
-          Hey there!, I&apos;m-
+        <h1 className="text-green-400 lg:text-4xl sm:text-2xl md:text-2xl font-semibold mb-6">
+          Hey there! I&apos;m-
         </h1>
-        <h2 className="text-white text-6xl sm:text-7xl md:text-8xl font-bold">
+        <h2 className="text-white lg:text-5xl sm:text-3xl md:text-3xl font-bold">
           Vansh Ahuja
         </h2>
-        <p className="text-gray-400 mt-6 text-xl sm:text-2xl md:text-3xl">
-          I am a passionate software developer with a love for creating intuitive and powerful web applications. I&apos;m a self-taught developer with a deep interest in Computer Science, constantly exploring new technologies to push the boundaries of frontend development. Currently, I specialize in React and Node, and I enjoy solving complex challenges with clean, maintainable code.
+        <p className="text-gray-200 mt-6 lg:text-3xl sm:text-1xl md:text-2xl leading-relaxed">
+          A passionate software developer with a love for creating intuitive and powerful web applications.
+          With  deep interest in Computer Science, I constantly exploring new technologies to push the boundaries of development. Currently, I specialize in Full Stack and Machine Learning and enjoy solving complex challenges with clean and  maintainable code.
         </p>
         <div className="mt-8">
           <span className="text-pink-400 text-lg sm:text-xl md:text-2xl block">
-            🚀 Exploring Next.js , Framer
+            🚀 Exploring Three.js , Framer
           </span>
           <span className="text-yellow-400 text-lg sm:text-xl md:text-2xl block mt-4">
-            ⚡ Proficient in MERN STACK 
+            ⚡ Proficient in MERN STACK
           </span>
         </div>
         <div className="flex space-x-6 mt-8">
